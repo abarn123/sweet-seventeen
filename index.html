@@ -24,20 +24,19 @@
         margin-bottom: 10px;
         font-family: "Lobster", cursive;
         animation: fadeIn 2s;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan pada teks */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
       }
       h2 {
         color: #ff6347;
         margin-bottom: 20px;
         font-weight: bold;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan pada teks */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
       }
       .cake {
         width: 200px;
         animation: bounce 1.5s infinite;
         transition: transform 0.2s;
       }
-
       .button {
         background-color: #ff6347;
         color: white;
@@ -64,9 +63,9 @@
         max-width: 600px;
         opacity: 0;
         transition: opacity 0.5s;
-        border: 2px solid #ff6347; /* Menambahkan border pada pesan */
-        border-radius: 10px; /* Sudut border tumpul */
-        padding: 10px; /* Menambahkan padding */
+        border: 2px solid #ff6347;
+        border-radius: 10px;
+        padding: 10px;
         background-color: rgba(255, 255, 255, 0.8);
       }
       .message.show {
@@ -129,6 +128,17 @@
       audio {
         display: none; /* Sembunyikan elemen audio */
       }
+
+      /* Media query untuk tampilan mobile */
+      @media (max-width: 768px) {
+        .balloon-container {
+          position: relative; /* Mengubah posisi menjadi relatif */
+          top: auto; /* Mengatur top menjadi otomatis */
+          flex-direction: column; /* Mengatur elemen untuk ditumpuk vertikal */
+          align-items: center; /* Memusatkan elemen di tengah */
+          margin-top: 20px; /* Menambahkan margin atas untuk jarak */
+        }
+      }
     </style>
   </head>
   <body>
@@ -166,14 +176,14 @@
         <img src="img/balon1.png" alt="Balon" class="balloon" />
       </div>
     </div>
-    <!-- audio -->
+
     <audio id="backgroundMusic" loop>
       <source
         src="audio/yt1z.net - Happy Birthday Song (Saxophone Cover by Danial Muzaf).mp3"
         type="audio/mpeg"
       />
     </audio>
-    <!-- penutup audio -->
+
     <script>
       let isMessageVisible = false;
 
