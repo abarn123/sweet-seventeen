@@ -101,23 +101,24 @@
         justify-content: center; /* Memusatkan balon */
         position: relative; /* Mengubah posisi menjadi relatif */
         margin-top: 20px; /* Menambahkan margin atas */
+        overflow-x: auto; /* Memungkinkan scroll horizontal */
+        padding: 10px; /* Menambahkan padding untuk spasi */
       }
       .balloon {
-        width: auto;
-        animation: float 5s infinite;
         height: 80px;
-        margin: 0 5px;
+        margin: 0 10px; /* Meningkatkan jarak antar balon */
+        animation: float 3s ease-in-out infinite; /* Animasi mengapung */
         transition: transform 0.3s;
       }
       .balloon:hover {
-        transform: scale(1.1);
+        transform: scale(1.1) rotate(5deg); /* Menambah efek saat hover */
       }
       @keyframes float {
         0% {
           transform: translateY(0);
         }
         50% {
-          transform: translateY(-20px);
+          transform: translateY(-10px);
         }
         100% {
           transform: translateY(0);
@@ -132,7 +133,6 @@
         .balloon-container {
           flex-direction: row; /* Tetap dalam posisi horizontal */
           align-items: center; /* Memusatkan elemen secara vertikal */
-          overflow-x: auto; /* Memungkinkan scroll horizontal jika diperlukan */
         }
       }
     </style>
